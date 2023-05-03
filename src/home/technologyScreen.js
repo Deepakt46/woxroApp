@@ -5,18 +5,18 @@ import NewsesShowCard from '../components/Cards/newsesShowCard';
 import { FrameWorkData } from '../Data/techScreenData';
 
 const TechnologyScreen = ({ navigation }) => {
-    useEffect(()=>(
-      setItem(FrameWorkData[0].list)
-      
-    ),[])
+    useEffect(() => (
+        setItem(FrameWorkData[0].list)
+
+    ), [])
     const [selectedTab, setSelectedTab] = useState('React');
     const [item, setItem] = useState();
     return (
-        <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+        <View style={styles.container}>
             <Text style={styles.welcomText}>Technology and blog</Text>
             <View style={styles.topBar}>
                 {FrameWorkData.map((item) => (
-                    <TouchableOpacity onPress={() =>{ setSelectedTab(item.name), setItem(item.list)}}>
+                    <TouchableOpacity onPress={() => { setSelectedTab(item.name), setItem(item.list) }}>
                         <ImageWrapper item={item.image} name={item.name} />
                     </TouchableOpacity>
                 ))}
@@ -27,13 +27,14 @@ const TechnologyScreen = ({ navigation }) => {
                     <Text style={styles.descriptionText} numberOfLines={2}>{item.description}</Text>
                 ))}
             </View>
-            <View style={{paddingTop: 20}}>
+            <View style={{ paddingTop: 20 }}>
                 <FlatList data={item}
-                renderItem={({item})=>(
-                    <NewsesShowCard item={item.image} description={item.description}/>
-                )}/>
+                    showsVerticalScrollIndicator={false}
+                    renderItem={({ item }) => (
+                        <NewsesShowCard item={item.image} description={item.description} />
+                    )} />
             </View>
-        </ScrollView>
+        </View>
     )
 }
 const styles = StyleSheet.create({
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
         paddingBottom: 50
     },
     welcomText: {
-        fontSize: 25,
+        fontSize: 30,
         fontWeight: 'bold',
         color: '#000'
     },
@@ -60,11 +61,11 @@ const styles = StyleSheet.create({
         padding: 5,
         marginTop: 10
     },
-    descriptionText:{
-        color:'#000',
+    descriptionText: {
+        color: '#000',
         textAlign: 'center',
-        fontSize:13,
-        paddingHorizontal:3
+        fontSize: 13,
+        paddingHorizontal: 3
     }
 })
 

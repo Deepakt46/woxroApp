@@ -17,7 +17,7 @@ const WelcomeScreen = ({navigation}) => {
                     <Text style={styles.buttonText}>Get Started</Text>
                 </TouchableOpacity>
             </View>
-
+            <Text style={styles.copyright}>2020 Woxro Technology Solutions Pvt Ltd</Text>
         </SafeAreaView>
     )
 }
@@ -26,24 +26,25 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 20,
         backgroundColor: '#fff',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
     },
     welcomeImage: {
-        height: height / 4,
+        height: height / 3,
         width: width - 40,
         resizeMode: 'contain',
     },
     contentTextWrap: {
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 20
     },
     headerText: {
-        fontSize: 30,
+        fontSize: 50,
         color: '#000',
         fontWeight: 'bold'
     },
     contentText: {
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 16,
         color: '#000',
         marginTop: 20
     },
@@ -59,6 +60,10 @@ const styles = StyleSheet.create({
         color:'#000',
         fontSize: 16,
         fontWeight:'500'
+    },
+    copyright:{
+        color:'#000',
+        textAlign:'center'
     }
 })
 

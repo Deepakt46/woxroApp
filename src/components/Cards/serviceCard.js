@@ -9,7 +9,7 @@ const ServiceCard = ({ name, description, image }) => {
             </View>
             <View style={styles.contentWrap}>
                 <Text style={styles.hederText}>{name}</Text>
-                <Text numberOfLines={2}>{description}</Text>
+                <Text style={styles.descriptionText} numberOfLines={2}>{description}</Text>
             </View>
         </View>
     )
@@ -26,14 +26,18 @@ const styles = StyleSheet.create({
     },
     hederText:{
         color:'#000',
-        fontWeight:'400',
-        fontSize: 18
+        fontWeight:'600',
+        fontSize: 20
     },
     imageStyle:{
         width: width/ 2,
         height: 80,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
+    },
+    descriptionText:{
+        color:'#8C8C8C',
+        fontSize: 15
     }
 })
 export default ServiceCard
