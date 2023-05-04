@@ -10,13 +10,14 @@ import HomeStack from './homeStack'
 const Home = () => {
     const Tab = createBottomTabNavigator();
     return (
-        <Tab.Navigator initialRouteName='home' backBehavior='initialRoute' screenOptions={{
+        <Tab.Navigator initialRouteName='home' backBehavior='history' screenOptions={{
             tabBarShowLabel: false,
             headerShown: false,
             tabBarActiveTintColor: 'red',
             tabBarStyle: {
                 borderTopWidth: 1,
-                borderTopColor: 'grey',
+                borderTopColor: '#909090',
+                elevation: 0,
             },
         }}>
             <Tab.Screen name='home' component={HomeStack} options={{

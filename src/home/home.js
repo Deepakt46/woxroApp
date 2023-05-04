@@ -18,11 +18,12 @@ const Home = ({navigation}) => {
                     data={serviceCardData}
                     columnWrapperStyle={{ justifyContent: 'space-between', marginVertical: 2 }}
                     numColumns={2}
+                    style={{marginBottom:100}}
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => (
                        <TouchableOpacity onPress={()=>item.name =='Technology' && navigation.navigate('tech')}>
                         <ServiceCard name={item.name} description={item.description}image={item.image} />
-                        </TouchableOpacity>
+                      </TouchableOpacity>
                     )} />
             </View>
         </View>
@@ -49,7 +50,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     componentWrap:{
-        paddingTop: 15,
+        paddingVertical: 15,
+        marginBottom: 40,
     }
 })
 
