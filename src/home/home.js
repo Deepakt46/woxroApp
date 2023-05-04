@@ -2,16 +2,15 @@ import { View, Text, StyleSheet, ScrollView, FlatList, TouchableOpacity } from '
 import React from 'react';
 import ServiceCard from '../components/Cards/serviceCard';
 import ImageWrapper from '../components/ImageWrapper/imageWrapper';
-import { serviceCardData } from '../Data/serviceCardData';
-import { welcomeScreenData } from '../Data/welcomeScreenData'
+import { welcomeScreenData, serviceCardData } from '../Data/Data'
 
-const home = ({navigation}) => {
+const Home = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.welcomText}>Welcome</Text>
             <View style={styles.topBar}>
                 {welcomeScreenData.map((item)=>(
-                    <ImageWrapper item={item.image} name={item.name}/>
+                    <ImageWrapper item={item.image} name={item.name} style={{borderColor:'#D5D5D5'}}/>
                 ))}
             </View>
             <View style={styles.componentWrap}> 
@@ -54,4 +53,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default home
+export default Home

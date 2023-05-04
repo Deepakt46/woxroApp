@@ -17,7 +17,7 @@ const WelcomeScreen = ({navigation}) => {
                     <Text style={styles.buttonText}>Get Started</Text>
                 </TouchableOpacity>
             </View>
-            <Text style={styles.copyright}>2020 Woxro Technology Solutions Pvt Ltd</Text>
+            <Text style={styles.copyright}>©2020 Woxro Technology Solutions Pvt Ltd</Text>
         </SafeAreaView>
     )
 }

@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const calls = () => {
+const Calls = () => {
   return (
     <View>
-      <Text>calls</Text>
+      <Text>Calls</Text>
     </View>
   )
 }
 
-export default calls
+export default Calls

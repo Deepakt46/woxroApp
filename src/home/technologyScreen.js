@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView, FlatList, TouchableOpacity } from '
 import React, { useState, useEffect } from 'react';
 import ImageWrapper from '../components/ImageWrapper/imageWrapper';
 import NewsesShowCard from '../components/Cards/newsesShowCard';
-import { FrameWorkData } from '../Data/techScreenData';
+import { FrameWorkData } from '../Data/Data';
 
 const TechnologyScreen = ({ navigation }) => {
     useEffect(() => (
@@ -17,7 +17,7 @@ const TechnologyScreen = ({ navigation }) => {
             <View style={styles.topBar}>
                 {FrameWorkData.map((item) => (
                     <TouchableOpacity onPress={() => { setSelectedTab(item.name), setItem(item.list) }}>
-                        <ImageWrapper item={item.image} name={item.name} />
+                        <ImageWrapper item={item.image} name={item.name} style={{borderColor: '#E9E9E9',}} />
                     </TouchableOpacity>
                 ))}
             </View>

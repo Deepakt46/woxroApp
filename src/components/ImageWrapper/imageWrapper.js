@@ -1,9 +1,9 @@
 import { View, Text , StyleSheet, Image} from 'react-native'
 import React from 'react'
 
-const ImageWrapper = ({ item, name }) => (
+const ImageWrapper = ({ item, name, style }) => (
     <View style={styles.topBarComponent}>
-        <View style={styles.iconWrap}>
+        <View style={[styles.iconWrap, {...style}]}>
             <Image source={item} style={styles.icon} />
         </View>
         <Text style={styles.textStyle}>{name}</Text>
@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
         height: 60,
         width: 60,
         borderRadius: 30,
-        borderColor: '#E9E9E9',
         borderWidth: 1,
         justifyContent: 'center',
         alignItems: 'center',

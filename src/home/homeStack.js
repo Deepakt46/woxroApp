@@ -4,7 +4,7 @@ import WelcomeScreen from '../welcomeScreen'
 import TechnologyScreen from './technologyScreen'
 import Home from './home'
 
-const index = () => {
+const Index = () => {
 const Stack = createNativeStackNavigator()
   return (
     <Stack.Navigator initialRouteName='home' screenOptions={{headerShown:false}}>
@@ -14,4 +14,4 @@ const Stack = createNativeStackNavigator()
   )
 }
 
-export default index
+export default Index
